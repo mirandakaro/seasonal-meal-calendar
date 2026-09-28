@@ -6,9 +6,9 @@
 
 一个开源 Agent Skill：告诉 AI「给家里做个三伏 40 天的食谱」，它会生成一份经过校验的菜单数据，再一键出一个手机上就能用的食谱网页。
 
-<img src="docs/preview.jpg" width="100%" alt="今日三餐 · 成品参考 · 四十日食历">
+<img src="docs/desktop-2.jpg" width="100%" alt="电脑版：今日三餐 · 做法 · 成品参考与食材">
 
-<sub>作者给家里做的「三伏四十日食历」实拍截图，每道菜配了 AI 生成的成品图。</sub>
+<sub>作者给家里做的「三伏四十日食历」电脑版截图，每道菜配了 AI 生成的成品图。</sub>
 
 </div>
 
@@ -27,13 +27,18 @@
 
 ## 📱 实际效果
 
+**电脑版**：左边当天三餐，中间做法，右边成品参考和采购勾选。
+
+<img src="docs/desktop-1.jpg" width="100%" alt="电脑版 · 西芹豆干炒里脊丝">
+<img src="docs/desktop-3.jpg" width="100%" alt="电脑版 · 番茄鹰嘴豆烩西葫芦">
+
+**手机版**：
+
 <table>
 <tr>
-<td align="center"><img src="docs/real-today.jpg" width="200"><br><sub>今日三餐</sub></td>
-<td align="center"><img src="docs/real-recipe.jpg" width="200"><br><sub>做法详情</sub></td>
-<td align="center"><img src="docs/real-photo.jpg" width="200"><br><sub>成品参考</sub></td>
-<td align="center"><img src="docs/real-40days.jpg" width="200"><br><sub>四十日食历</sub></td>
-<td align="center"><img src="docs/real-shop.jpg" width="200"><br><sub>采购与冰箱</sub></td>
+<td align="center"><img src="docs/real-today.jpg" width="220"><br><sub>今日三餐</sub></td>
+<td align="center"><img src="docs/real-photo.jpg" width="220"><br><sub>成品参考</sub></td>
+<td align="center"><img src="docs/real-40days.jpg" width="220"><br><sub>四十日食历</sub></td>
 </tr>
 </table>
 
