@@ -36,9 +36,9 @@
 
 <table>
 <tr>
-<td align="center"><img src="docs/real-today.jpg" width="220"><br><sub>今日三餐</sub></td>
-<td align="center"><img src="docs/real-photo.jpg" width="220"><br><sub>成品参考</sub></td>
-<td align="center"><img src="docs/real-40days.jpg" width="220"><br><sub>四十日食历</sub></td>
+<td align="center"><img src="docs/phone-today.jpg" width="240"><br><sub>今日三餐</sub></td>
+<td align="center"><img src="docs/phone-40days.jpg" width="240"><br><sub>四十日食历</sub></td>
+<td align="center"><img src="docs/phone-log.jpg" width="240"><br><sub>饮食记录</sub></td>
 </tr>
 </table>
 
