@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F8FAFC">
+<title>__TITLE__</title>
+<style>
+:root{--bg:#F8FAFC;--card:#fff;--ink:#1F2937;--sub:#5B6576;--mute:#7E8898;--line:#E4E7EC;
+--pri:#6F55C8;--pri-l:#F4F1FF;--pri-b:#E1DAFA;--blue:#4C74D9;--blue-l:#EEF4FF;--mint:#F3FBF8;--mint-b:#D7E8E2;
+--serif:"Noto Serif SC","Songti SC","STSong",serif;--sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;--fs:1}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:calc(15px * var(--fs))}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;padding-bottom:110px;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:2px solid var(--pri);outline-offset:2px}
+.wrap{max-width:560px;margin:0 auto}
+header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+.brand b{font-family:var(--serif);font-weight:600;font-size:1.3rem;display:block;line-height:1.1}
+.brand small{font-size:.68rem;letter-spacing:.2em;color:var(--mute)}
+.hbtn{display:flex;gap:8px;align-items:center}
+.pill{border:1px solid var(--pri-b);background:var(--pri-l);color:var(--pri);border-radius:10px;padding:6px 10px;font-size:.8rem;font-weight:600}
+.search{margin:12px 16px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px}
+.search input{border:0;outline:0;flex:1;font:inherit;font-size:.93rem;background:none}
+.strip{display:flex;align-items:center;gap:4px;background:#fff;border-block:1px solid var(--line);padding:10px 8px}
+.strip .days{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none}
+.arrow{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);flex:none}
+.d{flex:none;width:46px;height:56px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--sub)}
+.d b{font-family:var(--serif);font-size:1.07rem;font-weight:500}
+.d small{font-size:.66rem}
+.d.on{background:linear-gradient(180deg,#7358C9,#6347B7);color:#fff;box-shadow:0 4px 10px rgba(111,85,200,.25)}
+.sec{margin:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px}
+.hero{display:flex;overflow:hidden;border-radius:12px;width:100%;text-align:left}
+.hero .img{width:112px;min-height:120px;flex:none}
+.hero div.t{padding:20px 16px}
+.hero small{color:var(--sub);font-size:.8rem}
+.hero h3{font-family:var(--serif);font-weight:500;font-size:1.2rem;margin:4px 0}
+.img{position:relative;overflow:hidden;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;font-family:var(--serif);color:rgba(60,45,30,.55)}
+.img.ph{background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.75),transparent 55%),linear-gradient(145deg,var(--c1),var(--c2))}
+.img.ph:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.14) 0 2px,transparent 2px 9px)}
+.img.ph b{position:relative;z-index:1;font-weight:500;font-size:1em}
+.hero .img.ph b{font-size:2.4rem}.big.ph b{font-size:4rem;opacity:.8}
+.img.ph small{position:absolute;z-index:1;bottom:8px;font-family:var(--sans);font-size:.62rem;letter-spacing:.3em;opacity:.7}
+.r-staple{--c1:#F4E7CF;--c2:#E9D3AE}.r-main{--c1:#F3DDD3;--c2:#E6BFAE}.r-side{--c1:#DFEBDB;--c2:#C3D9BE}.r-soup{--c1:#E3ECF3;--c2:#C6D6E6}.r-drink{--c1:#EDE4F3;--c2:#D8C8E6}
+.title{margin:26px 16px 6px}
+.title .date{font-size:.87rem;color:var(--sub)}
+.title h1{font-family:var(--serif);font-weight:500;font-size:1.75rem;line-height:1.3}
+.title h1 em{font-style:normal;color:var(--pri);font-size:2.1rem;line-height:1;vertical-align:-2px}
+.title h1 span{font-family:var(--sans);font-size:.93rem;font-weight:600}
+.title p{font-size:.87rem;color:var(--sub);margin-top:6px}
+.meal{padding:14px 16px;margin-bottom:10px;position:relative;overflow:hidden}
+.meal.now{background:var(--blue-l);border-color:#D9E3F7}
+.meal.now:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--blue)}
+.meal h4{font-size:1rem;display:flex;justify-content:space-between;align-items:center}
+.meal h4 small{font-weight:400;color:var(--sub);font-size:.8rem}
+.dish{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:5px 6px;border-radius:6px;margin-top:4px}
+.dish:hover,.dish.hl{background:#fff}
+.dish .img{width:42px;height:30px;border-radius:6px;font-size:.7rem;flex:none}
+.row{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;width:100%;text-align:left}
+.row b{font-size:1rem}.row small{display:block;color:var(--sub);font-size:.8rem}
+.detail{background:#fff;border-top:1px solid var(--line);margin-top:20px;padding:22px 16px}
+.kicker{color:var(--blue);font-size:.87rem;font-weight:600}
+.detail h2{font-family:var(--serif);font-weight:500;font-size:1.8rem;line-height:1.3}
+.meta{display:flex;gap:14px;color:var(--sub);font-size:.87rem;margin:8px 0 14px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:.87rem;color:var(--sub);background:#fff}
+.btn.pri{border-color:var(--pri-b);color:var(--pri)}
+h5{font-size:1.02rem;margin:22px 0 8px}
+.ing{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line);font-size:.93rem}
+.ing span:last-child{color:var(--sub)}
+.step{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.93rem}
+.step i{flex:none;width:24px;height:24px;border-radius:50%;border:1px solid #C9D4F0;color:var(--blue);font-style:normal;font-size:.8rem;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.tip{background:var(--mint);border:1px solid var(--mint-b);border-radius:8px;padding:12px 14px;margin-top:14px;font-size:.87rem}
+.big{width:100%;aspect-ratio:4/3;border-radius:10px;margin-top:8px}
+.kcal{padding:16px}
+.kcal b{font-family:var(--serif);font-size:1.4rem;font-weight:500}
+.kcal .m{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-top:1px solid var(--line);gap:10px}
+.kcal .m p{font-size:.8rem;color:var(--sub)}
+.note{font-size:.78rem;color:var(--mute);margin:18px 16px;line-height:1.7}
+nav{position:fixed;left:12px;right:12px;bottom:max(10px,env(safe-area-inset-bottom));max-width:536px;margin:0 auto;height:60px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 4px 14px rgba(16,24,40,.08);display:flex;z-index:6}
+nav button{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:.73rem;color:#697386;gap:2px}
+nav button.on{color:var(--blue);font-weight:600}
+nav svg{width:20px;height:20px}
+.view{display:none}.view.on{display:block}
+.list .dayrow{display:flex;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);width:100%;text-align:left}
+.list .dayrow b{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--pri);width:40px;flex:none}
+.list .dayrow p{font-size:.85rem;color:var(--sub)}
+.phase{padding:18px 16px 6px;font-family:var(--serif);font-size:1.1rem}
+.shop label{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--line);font-size:.93rem}
+.shop label span{flex:1}.shop label em{font-style:normal;color:var(--sub)}
+.shop input[type=checkbox]{width:18px;height:18px;accent-color:var(--pri)}
+.shop label.done span{text-decoration:line-through;color:var(--mute)}
+.seg{display:flex;gap:6px;margin:12px 16px;flex-wrap:wrap}
+.seg button{border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.85rem;background:#fff}
+.seg button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+.cook{position:fixed;inset:0;background:#fff;z-index:20;display:none;flex-direction:column;padding:24px 22px}
+.cook.on{display:flex}
+.cook .n{color:var(--blue);font-weight:600}
+.cook .s{font-family:var(--serif);font-size:1.6rem;line-height:1.6;flex:1;display:flex;align-items:center}
+.cook .bar{height:4px;background:var(--line);border-radius:2px;overflow:hidden;margin:10px 0}
+.cook .bar i{display:block;height:100%;background:var(--pri)}
+.cook .ctl{display:flex;gap:10px}.cook .ctl button{flex:1;padding:14px;border-radius:10px;border:1px solid var(--line);font-size:1rem}
+.cook .ctl .go{background:var(--pri);color:#fff;border-color:var(--pri)}
+.empty{text-align:center;color:var(--mute);padding:40px 16px;font-size:.9rem}
+.set{display:flex;align-items:center;gap:10px;padding:12px 16px;font-size:.9rem}
+.set input{font:inherit;border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand"><b id="brand"></b><small id="slogan"></small></div>
+  <div class="hbtn">
+    <button class="pill" id="shareBtn" aria-label="分享当前菜单">分享菜单</button>
+    <button id="fsBtn" aria-label="切换舒展字号" style="font-weight:600;padding:6px">Aa</button>
+  </div>
+</header>
+
+<main>
+<section class="view on" id="v-today">
+  <label class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="搜索食材、菜名、做法" aria-label="搜索食材、菜名、做法"></label>
+  <div id="results"></div>
+  <div class="strip">
+    <button class="arrow" id="prev" aria-label="前一天">‹</button>
+    <div class="days" id="days"></div>
+    <button class="arrow" id="next" aria-label="后一天">›</button>
+  </div>
+  <div class="sec"><button class="card hero" id="hero"></button></div>
+  <div class="title" id="dtitle"></div>
+  <div class="sec" id="meals"></div>
+  <div class="sec"><button class="card row" data-go="shop"><span><b>三日采购</b><small>从今天起三天的食材，合并同类</small></span><span>›</span></button></div>
+  <div class="detail" id="detail"></div>
+  <div class="sec card kcal" id="kcal"></div>
+  <p class="note" id="note"></p>
+</section>
+
+<section class="view list" id="v-all"></section>
+<section class="view shop" id="v-shop"></section>
+<section class="view" id="v-fav"></section>
+<section class="view" id="v-log"></section>
+</main>
+</div>
+
+<div class="cook" id="cook" role="dialog" aria-modal="true" aria-label="跟做模式">
+  <div style="display:flex;justify-content:space-between"><span class="n" id="cookN"></span><button id="cookX" aria-label="关闭跟做模式">关闭 ✕</button></div>
+  <div class="bar"><i id="cookBar"></i></div>
+  <div class="s" id="cookS"></div>
+  <div class="ctl"><button id="cookP">上一步</button><button class="go" id="cookF">下一步</button></div>
+</div>
+
+<nav aria-label="主导航">
+  <button class="on" data-go="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11 12 4l9 7v9H3z"/></svg>今日</button>
+  <button data-go="all"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span id="navAll">全部</span></button>
+  <button data-go="shop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 7h14l-1.5 11h-11z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>采购</button>
+  <button data-go="fav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>收藏</button>
+  <button data-go="log"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12v18H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>记录</button>
+</nav>
+
+<script id="plan" type="application/json">__PLAN_JSON__</script>
+<script>
+(()=>{
+const P=JSON.parse(document.getElementById('plan').textContent);
+const M=P.meta,D=P.dishes,DAYS=P.days,MEALS=[['breakfast','早餐'],['lunch','午餐'],['dinner','晚餐']];
+const KEY='smc:'+M.title+':';
+const st=(k,v)=>v===undefined?JSON.parse(localStorage.getItem(KEY+k)||'null'):localStorage.setItem(KEY+k,JSON.stringify(v));
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const WK='日一二三四五六';
+let start=st('start')||M.startDate, cur=st('day')||1, dish=null, fav=new Set(st('fav')||[]), log=st('log')||{}, bought=new Set(st('bought')||[]), shopN=3;
+const dateOf=n=>{const d=new Date(start+'T00:00:00');d.setDate(d.getDate()+n-1);return d};
+const ymd=d=>`${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日`;
+const phaseOf=n=>(P.phases.find(p=>n>=p.fromDay&&n<=p.toDay)||{}).name||'';
+const ROLE={staple:'主食',main:'主菜',side:'时蔬',soup:'汤羹',drink:'饮品'};
+const img=(x,cls)=>x.image?`<span class="img ${cls||''}" style="background-image:url('${esc(x.image)}')" aria-hidden="true"></span>`
+  :`<span class="img ph r-${x.role||'main'} ${cls||''}" aria-hidden="true"><b>${esc(x.name.replace(/^(清|嫩|蒸|炒|蒜蓉|番茄)/,'')[0]||x.name[0])}</b>${/big|heroimg/.test(cls||'')?`<small>${ROLE[x.role]||''}</small>`:''}</span>`;
+const kcalDay=d=>MEALS.reduce((s,[m])=>s+d.meals[m].reduce((a,id)=>a+D[id].kcalPerServing,0),0);
+const q2=n=>Math.round(n*10)/10;
+
+$('#brand').textContent=M.brand;$('#slogan').textContent=M.slogan||'';$('#navAll').textContent=M.totalDays+'天';
+document.title=M.title;
+
+function strip(){
+  $('#days').innerHTML=DAYS.map(d=>{const dt=dateOf(d.day),ph=phaseOf(d.day),first=P.phases.some(p=>p.fromDay===d.day);
+    return `<button class="d ${d.day===cur?'on':''}" data-day="${d.day}" aria-label="第${d.day}天 ${ymd(dt)}" aria-current="${d.day===cur}"><b>${dt.getDate()}</b><small>${first?esc(ph):'周'+WK[dt.getDay()]}</small></button>`}).join('');
+  const on=$('#days .on'); if(on) on.scrollIntoView({inline:'center',block:'nearest'});
+}
+function today(){
+  const d=DAYS[cur-1],dt=dateOf(cur),h=new Date().getHours(),nowMeal=h<10?'breakfast':h<15?'lunch':'dinner';
+  if(!dish||!Object.values(d.meals).flat().includes(dish)) dish=d.featured||d.meals.lunch[0];
+  const f=D[d.featured||d.meals.lunch[0]];
+  $('#hero').innerHTML=`${img(f,'heroimg')}<div class="t"><small>今天先做这道</small><h3>${esc(f.name)}</h3><small>约 ${f.minutes} 分钟 · 看具体做法</small></div>`;
+  $('#hero').onclick=()=>{dish=d.featured||d.meals.lunch[0];detail();$('#detail').scrollIntoView({behavior:'smooth'})};
+  $('#dtitle').innerHTML=`<div class="date">${ymd(dt)}　星期${WK[dt.getDay()]}</div><h1>${esc(M.seasonLabel||'')}第 <em>${cur}</em> 天 <span>/ ${M.totalDays} · ${esc(phaseOf(cur))}</span></h1>${d.flavor?`<p>今日风味 · ${esc(d.flavor)}</p>`:''}`;
+  $('#meals').innerHTML=MEALS.map(([m,cn])=>`<div class="card meal ${m===nowMeal?'now':''}"><h4>${cn}<small>约 ${d.meals[m].reduce((a,id)=>a+D[id].kcalPerServing,0)} 千卡</small></h4>${d.meals[m].map(id=>`<button class="dish ${id===dish?'hl':''}" data-dish="${id}">${img(D[id])}<span>${esc(D[id].name)}</span></button>`).join('')}</div>`).join('');
+  detail();
+  const L=log[cur]||{};
+  $('#kcal').innerHTML=`<div>当日主餐估算</div><b>约 ${kcalDay(d)} 千卡 / 人 · 三餐</b><p style="font-size:.8rem;color:var(--sub);margin:4px 0 8px">按菜谱用量估算，不含水果、奶类与个人加餐。</p>`+
+    MEALS.map(([m,cn])=>`<div class="m"><div><b style="font-size:1rem;font-family:var(--sans)">${cn}</b><p>${d.meals[m].map(id=>esc(D[id].name)).join(' · ')}</p></div><button class="btn ${L[m]?'':'pri'}" data-log="${m}">${L[m]?'已记 '+L[m]:'吃完后记时间'}</button></div>`).join('');
+  $('#note').innerHTML=`${esc(M.dailyExtras||'')}<br>家常搭配，不是医疗处方。有慢性病、特殊用药或饮食限制时，请按医生或营养师意见调整。${M.exclusions&&M.exclusions.length?`<br>已排除：${M.exclusions.map(esc).join('、')}`:''}${M.updatedAt?` · 更新于 ${esc(M.updatedAt)}`:''}
+  <div class="set">第 1 天日期 <input type="date" id="startIn" value="${start}" aria-label="修改第一天日期"></div>`;
+  $('#startIn').onchange=e=>{if(e.target.value){start=e.target.value;st('start',start);render()}};
+  strip();
+}
+function detail(){
+  const x=D[dish];
+  $('#detail').innerHTML=`<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px"><div><div class="kicker">今日做法</div><h2>${esc(x.name)}</h2></div>
+  <button class="btn" data-fav="${dish}" aria-pressed="${fav.has(dish)}">${fav.has(dish)?'♥ 已收藏':'♡ 收藏'}</button></div>
+  ${x.summary?`<p style="color:var(--sub);font-size:.9rem">${esc(x.summary)}</p>`:''}
+  <div class="meta"><span>${M.servings} 人份</span><span>约 ${x.minutes} 分钟</span><span>约 ${x.kcalPerServing} 千卡/人</span></div>
+  <button class="btn pri" id="cookGo">打开跟做模式 →</button>
+  <h5>食材（${M.servings}人份）</h5>${x.ingredients.map(i=>`<div class="ing"><span>${esc(i.item)}</span><span>${q2(i.qty)}${esc(i.unit)}</span></div>`).join('')}
+  <h5>做法</h5>${x.steps.map((s,i)=>`<div class="step"><i>${i+1}</i><p>${esc(s)}</p></div>`).join('')}
+  ${x.tip?`<div class="tip"><b>小贴士</b>　${esc(x.tip)}</div>`:''}
+  <h5>成品参考</h5>${img(x,'big')}`;
+  $('#cookGo').onclick=()=>cook(0);
+  document.querySelectorAll('#meals .dish').forEach(b=>b.classList.toggle('hl',b.dataset.dish===dish));
+}
+let ci=0;
+function cook(i){const x=D[dish];ci=Math.max(0,Math.min(i,x.steps.length-1));
+  $('#cook').classList.add('on');$('#cookN').textContent=`${x.name} · 第 ${ci+1} / ${x.steps.length} 步`;
+  $('#cookS').textContent=x.steps[ci];$('#cookBar').style.width=((ci+1)/x.steps.length*100)+'%';
+  $('#cookP').disabled=ci===0;$('#cookF').textContent=ci===x.steps.length-1?'做完了':'下一步';$('#cookF').focus()}
+$('#cookP').onclick=()=>cook(ci-1);
+$('#cookF').onclick=()=>{ci===D[dish].steps.length-1?$('#cook').classList.remove('on'):cook(ci+1)};
+$('#cookX').onclick=()=>$('#cook').classList.remove('on');
+document.addEventListener('keydown',e=>{if(!$('#cook').classList.contains('on'))return;if(e.key==='Escape')$('#cookX').click();if(e.key==='ArrowRight')$('#cookF').click();if(e.key==='ArrowLeft')cook(ci-1)});
+
+function all(){
+  $('#v-all').innerHTML=P.phases.map(p=>`<div class="phase">${esc(p.name)} · 第 ${p.fromDay}–${p.toDay} 天${p.note?` <small style="font-family:var(--sans);font-size:.8rem;color:var(--sub)">${esc(p.note)}</small>`:''}</div>`+
+    DAYS.filter(d=>d.day>=p.fromDay&&d.day<=p.toDay).map(d=>{const dt=dateOf(d.day);return `<button class="dayrow" data-day="${d.day}" data-go="today"><b>${d.day}</b><div><div style="font-size:.85rem">${dt.getMonth()+1}月${dt.getDate()}日 周${WK[dt.getDay()]} · 约 ${kcalDay(d)} 千卡</div><p>${MEALS.map(([m])=>d.meals[m].map(id=>esc(D[id].name)).join('、')).join(' ｜ ')}</p></div></button>`}).join('')).join('');
+}
+function shop(){
+  const to=Math.min(M.totalDays,cur+shopN-1),agg={};
+  for(let n=cur;n<=to;n++)MEALS.forEach(([m])=>DAYS[n-1].meals[m].forEach(id=>D[id].ingredients.forEach(i=>{if(i.shop===false)return;const k=i.item+'|'+i.unit;agg[k]=(agg[k]||0)+i.qty})));
+  const items=Object.entries(agg).sort((a,b)=>a[0].localeCompare(b[0],'zh'));
+  $('#v-shop').innerHTML=`<div class="title"><h1 style="font-size:1.5rem">采购卡</h1><p>${to>cur?`第 ${cur}–${to} 天`:`第 ${cur} 天`} · ${M.servings} 人份 · 调料常备不列入</p></div>
+  <div class="seg">${[1,3,7].map(n=>`<button class="${n===shopN?'on':''}" data-shopn="${n}">${n} 天</button>`).join('')}</div>
+  <div class="card sec" style="margin:0 14px">${items.map(([k,v])=>{const[it,u]=k.split('|'),id=cur+':'+shopN+':'+k;return `<label class="${bought.has(id)?'done':''}"><input type="checkbox" data-buy="${esc(id)}" ${bought.has(id)?'checked':''}><span>${esc(it)}</span><em>${q2(v)}${esc(u)}</em></label>`}).join('')||'<p class="empty">没有需要采购的食材</p>'}</div>`;
+}
+function favs(){
+  const ids=[...fav].filter(id=>D[id]);
+  $('#v-fav').innerHTML=`<div class="title"><h1 style="font-size:1.5rem">收藏</h1></div>`+(ids.length?`<div class="sec card">${ids.map(id=>`<button class="dish" style="padding:10px" data-open="${id}">${img(D[id])}<span>${esc(D[id].name)}</span></button>`).join('')}</div>`:'<p class="empty">在做法页点「♡ 收藏」，常做的菜会出现在这里</p>');
+}
+function logs(){
+  const ks=Object.keys(log).map(Number).sort((a,b)=>a-b);
+  $('#v-log').innerHTML=`<div class="title"><h1 style="font-size:1.5rem">饮食记录</h1><p>记录只保存在这台设备上</p></div>`+(ks.length?`<div class="sec card">${ks.map(k=>`<div class="row"><span><b>第 ${k} 天</b><small>${MEALS.filter(([m])=>log[k][m]).map(([m,cn])=>cn+' '+log[k][m]).join(' · ')}</small></span></div>`).join('')}</div>`:'<p class="empty">在「今日」页吃完一餐点「吃完后记时间」</p>');
+}
+function search(q){
+  q=q.trim();if(!q){$('#results').innerHTML='';return}
+  const hits=Object.entries(D).filter(([,x])=>(x.name+x.ingredients.map(i=>i.item).join()+x.steps.join()).includes(q)).slice(0,8);
+  $('#results').innerHTML=`<div class="sec card">${hits.map(([id,x])=>{const n=DAYS.find(d=>Object.values(d.meals).flat().includes(id));return `<button class="dish" style="padding:10px" data-open="${id}">${img(x)}<span>${esc(x.name)}<small style="display:block;color:var(--sub);font-size:.75rem">${n?'第 '+n.day+' 天':''}</small></span></button>`}).join('')||'<p class="empty">没有找到</p>'}</div>`;
+}
+function go(v){document.querySelectorAll('.view').forEach(e=>e.classList.toggle('on',e.id==='v-'+v));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.go===v));
+  ({all,shop,fav:favs,log:logs,today})[v]();scrollTo(0,0)}
+function render(){today();if($('#v-all').classList.contains('on'))all()}
+function setDay(n){cur=Math.max(1,Math.min(M.totalDays,n));st('day',cur);dish=null;render()}
+
+document.addEventListener('click',e=>{const t=e.target.closest('button,input');if(!t)return;const ds=t.dataset;
+  if(ds.day){setDay(+ds.day)}
+  if(ds.go){go(ds.go)}
+  if(ds.dish){dish=ds.dish;detail();$('#detail').scrollIntoView({behavior:'smooth'})}
+  if(ds.open){const n=DAYS.find(d=>Object.values(d.meals).flat().includes(ds.open));if(n)cur=n.day;st('day',cur);$('#q').value='';search('');go('today');dish=ds.open;detail();$('#detail').scrollIntoView()}
+  if(ds.fav){fav.has(ds.fav)?fav.delete(ds.fav):fav.add(ds.fav);st('fav',[...fav]);detail()}
+  if(ds.log){const now=new Date();log[cur]=log[cur]||{};log[cur][ds.log]=log[cur][ds.log]?undefined:`${now.getHours()}:${String(now.getMinutes()).padStart(2,'0')}`;st('log',log);today()}
+  if(ds.shopn){shopN=+ds.shopn;shop()}
+  if(ds.buy!==undefined){bought.has(ds.buy)?bought.delete(ds.buy):bought.add(ds.buy);st('bought',[...bought]);t.closest('label').classList.toggle('done',t.checked)}
+});
+$('#prev').onclick=()=>setDay(cur-1);$('#next').onclick=()=>setDay(cur+1);
+$('#q').oninput=e=>search(e.target.value);
+let fs=st('fs')||1;const applyFs=()=>document.documentElement.style.setProperty('--fs',fs);applyFs();
+$('#fsBtn').onclick=()=>{fs=fs===1?1.18:1;st('fs',fs);applyFs()};
+$('#shareBtn').onclick=async()=>{const d=DAYS[cur-1],t=`${M.title} · 第${cur}天\n`+MEALS.map(([m,cn])=>cn+'：'+d.meals[m].map(id=>D[id].name).join('、')).join('\n');
+  try{if(navigator.share)await navigator.share({title:M.title,text:t});else{await navigator.clipboard.writeText(t);$('#shareBtn').textContent='已复制';setTimeout(()=>$('#shareBtn').textContent='分享菜单',1500)}}catch(_){}};
+render();
+})();
+</script>
+</body>
+</html>

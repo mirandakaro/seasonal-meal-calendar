@@ -1,0 +1,583 @@
+{
+  "meta": {
+    "brand": "季候编辑部",
+    "slogan": "顺时而食，日日有常",
+    "title": "立秋三日食历（示例）",
+    "seasonLabel": "立秋",
+    "startDate": "2026-08-07",
+    "totalDays": 3,
+    "servings": 2,
+    "exclusions": [
+      "香菜",
+      "苦瓜"
+    ],
+    "healthNotes": [
+      "少油",
+      "少辣",
+      "优质蛋白"
+    ],
+    "dailyExtras": "可另配约 300ml 奶类、200—350g 当季水果与少量坚果；主食份量按食欲和活动量调整。",
+    "updatedAt": "2026-09-28"
+  },
+  "phases": [
+    {
+      "name": "立秋",
+      "fromDay": 1,
+      "toDay": 3,
+      "note": "暑气未尽，清润为主"
+    }
+  ],
+  "dishes": {
+    "oat-pumpkin-porridge": {
+      "name": "南瓜燕麦粥",
+      "role": "staple",
+      "minutes": 20,
+      "kcalPerServing": 160,
+      "summary": "南瓜蒸软再下燕麦，自带甜味，不用加糖。",
+      "ingredients": [
+        {
+          "item": "南瓜",
+          "qty": 200,
+          "unit": "g"
+        },
+        {
+          "item": "燕麦片",
+          "qty": 50,
+          "unit": "g"
+        },
+        {
+          "item": "清水",
+          "qty": 600,
+          "unit": "ml",
+          "shop": false
+        }
+      ],
+      "steps": [
+        "南瓜去皮去籽，切 1.5 厘米小块。",
+        "南瓜加 600ml 清水大火煮开，转中小火煮 10 分钟，至筷子能轻松戳穿。",
+        "用勺背把一半南瓜压成泥，倒入燕麦片，小火边搅边煮 3—4 分钟。",
+        "粥面冒大泡、燕麦吸水变软即可关火，焖 2 分钟再盛。"
+      ],
+      "tip": "即食燕麦煮 2 分钟就够，整粒燕麦需延长到 12 分钟。"
+    },
+    "steamed-egg": {
+      "name": "嫩蒸水蛋",
+      "role": "main",
+      "minutes": 15,
+      "kcalPerServing": 80,
+      "summary": "蛋液与温水 1:1.5，表面像布丁一样平。",
+      "ingredients": [
+        {
+          "item": "鸡蛋",
+          "qty": 2,
+          "unit": "个"
+        },
+        {
+          "item": "温水",
+          "qty": 150,
+          "unit": "ml",
+          "shop": false
+        },
+        {
+          "item": "低钠生抽",
+          "qty": 5,
+          "unit": "ml",
+          "shop": false
+        }
+      ],
+      "steps": [
+        "鸡蛋打散，加 150ml 约 40℃ 温水，顺一个方向搅匀。",
+        "蛋液过筛倒入碗中，撇去表面气泡，盖盘子或保鲜膜。",
+        "水开后放入，中小火蒸 8—10 分钟。",
+        "晃动碗边，中心轻微颤动不流动即熟，淋生抽上桌。"
+      ],
+      "tip": "火太大会出蜂窝，全程保持中小火。"
+    },
+    "multigrain-rice": {
+      "name": "杂粮米饭",
+      "role": "staple",
+      "minutes": 45,
+      "kcalPerServing": 190,
+      "ingredients": [
+        {
+          "item": "大米",
+          "qty": 80,
+          "unit": "g"
+        },
+        {
+          "item": "糙米",
+          "qty": 40,
+          "unit": "g"
+        },
+        {
+          "item": "小米",
+          "qty": 20,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        "糙米提前浸泡 2 小时，与大米、小米一起淘洗两遍。",
+        "加水到米面以上约 1 个指节，按电饭煲杂粮模式。",
+        "跳闸后焖 10 分钟再开盖，用饭勺翻松。"
+      ]
+    },
+    "clam-winter-melon-soup": {
+      "name": "花蛤冬瓜汤",
+      "role": "soup",
+      "minutes": 25,
+      "kcalPerServing": 70,
+      "summary": "冬瓜先煮透，花蛤最后下，开口即关火。",
+      "ingredients": [
+        {
+          "item": "花蛤",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "item": "冬瓜",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "item": "生姜",
+          "qty": 10,
+          "unit": "g"
+        },
+        {
+          "item": "盐",
+          "qty": 2,
+          "unit": "g",
+          "shop": false
+        }
+      ],
+      "steps": [
+        "花蛤放淡盐水中吐沙 1 小时，搓洗外壳。",
+        "冬瓜去皮切 0.8 厘米厚片，生姜切丝。",
+        "锅中 800ml 水加姜丝烧开，下冬瓜中火煮 8 分钟至半透明。",
+        "放入花蛤，大火煮 2—3 分钟，看到大部分开口立刻关火，加盐。"
+      ],
+      "tip": "煮 5 分钟仍不开口的花蛤直接挑掉不吃。"
+    },
+    "garlic-broccoli": {
+      "name": "蒜蓉西兰花",
+      "role": "side",
+      "minutes": 10,
+      "kcalPerServing": 60,
+      "ingredients": [
+        {
+          "item": "西兰花",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "item": "大蒜",
+          "qty": 3,
+          "unit": "瓣"
+        },
+        {
+          "item": "食用油",
+          "qty": 6,
+          "unit": "ml",
+          "shop": false
+        },
+        {
+          "item": "盐",
+          "qty": 1,
+          "unit": "g",
+          "shop": false
+        }
+      ],
+      "steps": [
+        "西兰花切小朵，淡盐水泡 10 分钟后冲净。",
+        "水开加几滴油，西兰花焯 60 秒捞出过凉。",
+        "锅中油五成热下蒜末小火炒 20 秒出香，不要炒黄。",
+        "倒入西兰花大火翻 40 秒，加盐拌匀出锅。"
+      ]
+    },
+    "steamed-sweet-potato": {
+      "name": "蒸红薯",
+      "role": "staple",
+      "minutes": 25,
+      "kcalPerServing": 130,
+      "ingredients": [
+        {
+          "item": "红薯",
+          "qty": 300,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        "红薯洗净，粗的对半切开。",
+        "水开后上锅，大火蒸 20 分钟。",
+        "筷子能无阻力插到底即熟。"
+      ]
+    },
+    "chicken-mushroom": {
+      "name": "香菇滑鸡",
+      "role": "main",
+      "minutes": 30,
+      "kcalPerServing": 210,
+      "summary": "鸡腿去皮切块，淀粉抓匀锁水，蒸出来嫩。",
+      "ingredients": [
+        {
+          "item": "去骨鸡腿",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "item": "鲜香菇",
+          "qty": 100,
+          "unit": "g"
+        },
+        {
+          "item": "生姜",
+          "qty": 8,
+          "unit": "g"
+        },
+        {
+          "item": "低钠生抽",
+          "qty": 10,
+          "unit": "ml",
+          "shop": false
+        },
+        {
+          "item": "玉米淀粉",
+          "qty": 5,
+          "unit": "g",
+          "shop": false
+        }
+      ],
+      "steps": [
+        "鸡腿去皮去多余脂肪，切 3 厘米块；香菇切厚片，生姜切丝。",
+        "鸡块加生抽、姜丝、淀粉抓匀，腌 15 分钟。",
+        "香菇铺盘底，鸡块铺在上面，尽量单层不叠。",
+        "水开后大火蒸 15 分钟，筷子戳最厚处流出清汁即熟。"
+      ],
+      "tip": "鸡块叠太厚中间不容易熟，用大一点的盘子摊开。"
+    },
+    "tomato-tofu": {
+      "name": "番茄烩豆腐",
+      "role": "side",
+      "minutes": 15,
+      "kcalPerServing": 120,
+      "ingredients": [
+        {
+          "item": "北豆腐",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "item": "番茄",
+          "qty": 2,
+          "unit": "个"
+        },
+        {
+          "item": "香葱",
+          "qty": 10,
+          "unit": "g"
+        },
+        {
+          "item": "食用油",
+          "qty": 6,
+          "unit": "ml",
+          "shop": false
+        },
+        {
+          "item": "盐",
+          "qty": 1,
+          "unit": "g",
+          "shop": false
+        }
+      ],
+      "steps": [
+        "豆腐切 2 厘米方块，番茄顶部划十字烫 30 秒去皮切小块。",
+        "锅中少油，番茄中火炒 3 分钟至出沙成酱。",
+        "加 100ml 清水烧开，放豆腐，轻推不翻炒，小火烩 5 分钟。",
+        "汤汁略收浓，加盐、撒葱花关火。"
+      ]
+    },
+    "millet-yam-porridge": {
+      "name": "小米山药粥",
+      "role": "staple",
+      "minutes": 30,
+      "kcalPerServing": 150,
+      "ingredients": [
+        {
+          "item": "小米",
+          "qty": 60,
+          "unit": "g"
+        },
+        {
+          "item": "铁棍山药",
+          "qty": 150,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        "小米淘洗一遍；山药戴手套去皮，切 1 厘米段。",
+        "小米加 800ml 水大火烧开，转小火煮 15 分钟。",
+        "下山药再煮 10 分钟，期间搅两次防粘底。",
+        "米油浮起、山药能用勺压碎即可。"
+      ],
+      "tip": "山药黏液容易让手痒，处理时戴手套或手上抹点醋。"
+    },
+    "boiled-egg": {
+      "name": "水煮蛋",
+      "role": "main",
+      "minutes": 12,
+      "kcalPerServing": 75,
+      "ingredients": [
+        {
+          "item": "鸡蛋",
+          "qty": 2,
+          "unit": "个"
+        }
+      ],
+      "steps": [
+        "鸡蛋冷水下锅，水没过蛋 1 厘米。",
+        "大火烧开后转中火煮 8 分钟。",
+        "捞出泡冷水 2 分钟，更好剥壳。"
+      ]
+    },
+    "steamed-bass": {
+      "name": "清蒸鲈鱼",
+      "role": "main",
+      "minutes": 20,
+      "kcalPerServing": 150,
+      "summary": "水完全烧开再上锅，蒸好倒掉腥水再淋汁。",
+      "ingredients": [
+        {
+          "item": "鲈鱼",
+          "qty": 400,
+          "unit": "g"
+        },
+        {
+          "item": "香葱",
+          "qty": 20,
+          "unit": "g"
+        },
+        {
+          "item": "生姜",
+          "qty": 15,
+          "unit": "g"
+        },
+        {
+          "item": "蒸鱼豉油",
+          "qty": 12,
+          "unit": "ml",
+          "shop": false
+        }
+      ],
+      "steps": [
+        "鲈鱼去鳞去内脏洗净擦干，两面各斜划 2 刀，姜片塞进刀口和鱼肚。",
+        "盘底垫两根筷子，鱼放上面，蒸锅水完全烧开后放入。",
+        "大火蒸 8 分钟，关火焖 2 分钟。",
+        "倒掉盘中腥水、拣掉姜片，铺葱丝，淋蒸鱼豉油。"
+      ],
+      "tip": "鱼眼变白凸出、背鳍一拉就掉，就是刚好熟。"
+    },
+    "stirfry-bokchoy": {
+      "name": "清炒小油菜",
+      "role": "side",
+      "minutes": 8,
+      "kcalPerServing": 45,
+      "ingredients": [
+        {
+          "item": "小油菜",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "item": "大蒜",
+          "qty": 2,
+          "unit": "瓣"
+        },
+        {
+          "item": "食用油",
+          "qty": 5,
+          "unit": "ml",
+          "shop": false
+        },
+        {
+          "item": "盐",
+          "qty": 1,
+          "unit": "g",
+          "shop": false
+        }
+      ],
+      "steps": [
+        "小油菜掰开洗净，沥干水分，大的对半切。",
+        "锅烧热下油，蒜片小火炒 15 秒。",
+        "先下菜梗大火炒 30 秒，再下菜叶炒 30 秒至刚变软。",
+        "加盐翻匀立即出锅，避免出水。"
+      ]
+    },
+    "corn-cob": {
+      "name": "蒸玉米",
+      "role": "staple",
+      "minutes": 20,
+      "kcalPerServing": 110,
+      "ingredients": [
+        {
+          "item": "甜玉米",
+          "qty": 2,
+          "unit": "根"
+        }
+      ],
+      "steps": [
+        "玉米剥去外皮，保留最里层一两片嫩叶。",
+        "水开后上锅，大火蒸 15 分钟。",
+        "用指甲掐一粒，饱满出浆即熟。"
+      ]
+    },
+    "shrimp-zucchini": {
+      "name": "虾仁炒西葫芦",
+      "role": "main",
+      "minutes": 15,
+      "kcalPerServing": 140,
+      "ingredients": [
+        {
+          "item": "鲜虾仁",
+          "qty": 200,
+          "unit": "g"
+        },
+        {
+          "item": "西葫芦",
+          "qty": 300,
+          "unit": "g"
+        },
+        {
+          "item": "胡萝卜",
+          "qty": 50,
+          "unit": "g"
+        },
+        {
+          "item": "食用油",
+          "qty": 6,
+          "unit": "ml",
+          "shop": false
+        },
+        {
+          "item": "盐",
+          "qty": 1.5,
+          "unit": "g",
+          "shop": false
+        },
+        {
+          "item": "玉米淀粉",
+          "qty": 3,
+          "unit": "g",
+          "shop": false
+        }
+      ],
+      "steps": [
+        "虾仁挑去虾线，用厨房纸吸干，加淀粉抓匀。",
+        "西葫芦对半切成 0.5 厘米半月片，胡萝卜切薄片。",
+        "锅中少油，虾仁中火煎 1 分钟至两面变红，盛出。",
+        "原锅下胡萝卜、西葫芦大火炒 2 分钟至边缘微透，倒回虾仁加盐翻 30 秒出锅。"
+      ],
+      "tip": "虾仁一变色就先盛出来，最后再回锅，才不会老。"
+    },
+    "seaweed-egg-soup": {
+      "name": "紫菜蛋花汤",
+      "role": "soup",
+      "minutes": 8,
+      "kcalPerServing": 50,
+      "ingredients": [
+        {
+          "item": "紫菜",
+          "qty": 5,
+          "unit": "g"
+        },
+        {
+          "item": "鸡蛋",
+          "qty": 1,
+          "unit": "个"
+        },
+        {
+          "item": "香葱",
+          "qty": 5,
+          "unit": "g"
+        },
+        {
+          "item": "盐",
+          "qty": 1,
+          "unit": "g",
+          "shop": false
+        }
+      ],
+      "steps": [
+        "紫菜撕小片，鸡蛋打散。",
+        "600ml 水烧开，下紫菜煮 1 分钟。",
+        "转小火，蛋液绕圈细细淋入，停 10 秒再轻推。",
+        "加盐、撒葱花关火。"
+      ]
+    }
+  },
+  "days": [
+    {
+      "day": 1,
+      "flavor": "清润家常",
+      "featured": "clam-winter-melon-soup",
+      "meals": {
+        "breakfast": [
+          "oat-pumpkin-porridge",
+          "steamed-egg"
+        ],
+        "lunch": [
+          "multigrain-rice",
+          "clam-winter-melon-soup",
+          "garlic-broccoli"
+        ],
+        "dinner": [
+          "steamed-sweet-potato",
+          "chicken-mushroom",
+          "tomato-tofu"
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "flavor": "清鲜粤味",
+      "featured": "steamed-bass",
+      "meals": {
+        "breakfast": [
+          "millet-yam-porridge",
+          "boiled-egg"
+        ],
+        "lunch": [
+          "multigrain-rice",
+          "steamed-bass",
+          "stirfry-bokchoy"
+        ],
+        "dinner": [
+          "corn-cob",
+          "shrimp-zucchini",
+          "seaweed-egg-soup"
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "flavor": "温和鲜甜",
+      "featured": "chicken-mushroom",
+      "meals": {
+        "breakfast": [
+          "oat-pumpkin-porridge",
+          "boiled-egg"
+        ],
+        "lunch": [
+          "multigrain-rice",
+          "chicken-mushroom",
+          "stirfry-bokchoy"
+        ],
+        "dinner": [
+          "steamed-sweet-potato",
+          "steamed-egg",
+          "garlic-broccoli",
+          "seaweed-egg-soup"
+        ]
+      }
+    }
+  ]
+}

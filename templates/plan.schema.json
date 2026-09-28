@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mirandakaro/seasonal-meal-calendar/templates/plan.schema.json",
+  "title": "Seasonal meal plan",
+  "type": "object",
+  "required": ["meta", "phases", "dishes", "days"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["brand", "title", "startDate", "totalDays", "servings", "exclusions"],
+      "additionalProperties": false,
+      "properties": {
+        "brand": { "type": "string", "description": "页头品牌名，如：季候编辑部" },
+        "slogan": { "type": "string", "description": "品牌副标题，如：顺时而食，日日有常" },
+        "title": { "type": "string", "description": "计划名，如：三伏四十日食历" },
+        "seasonLabel": { "type": "string", "description": "大标题前缀，如：三伏、立秋、冬至" },
+        "startDate": { "type": "string", "format": "date", "description": "默认第 1 天日期，网页里可修改" },
+        "totalDays": { "type": "integer", "minimum": 1, "maximum": 120 },
+        "servings": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "exclusions": { "type": "array", "items": { "type": "string" }, "description": "忌口，全局零命中" },
+        "healthNotes": { "type": "array", "items": { "type": "string" }, "description": "饮食偏好，如低油少辣；不是医疗建议" },
+        "dailyExtras": { "type": "string", "description": "日常搭配说明（奶类、水果等）" },
+        "updatedAt": { "type": "string", "format": "date" }
+      }
+    },
+    "phases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "fromDay", "toDay"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "description": "阶段名，如：初伏" },
+          "fromDay": { "type": "integer", "minimum": 1 },
+          "toDay": { "type": "integer", "minimum": 1 },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "dishes": {
+      "type": "object",
+      "description": "以 dish id 为键的菜谱库",
+      "additionalProperties": { "$ref": "#/$defs/dish" }
+    },
+    "days": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["day", "meals"],
+        "additionalProperties": false,
+        "properties": {
+          "day": { "type": "integer", "minimum": 1 },
+          "flavor": { "type": "string", "description": "今日风味，如：清鲜粤味" },
+          "featured": { "type": "string", "description": "今天先做这道：dish id" },
+          "meals": {
+            "type": "object",
+            "required": ["breakfast", "lunch", "dinner"],
+            "additionalProperties": false,
+            "properties": {
+              "breakfast": { "$ref": "#/$defs/meal" },
+              "lunch": { "$ref": "#/$defs/meal" },
+              "dinner": { "$ref": "#/$defs/meal" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "meal": { "type": "array", "minItems": 1, "items": { "type": "string", "description": "dish id" } },
+    "dish": {
+      "type": "object",
+      "required": ["name", "minutes", "kcalPerServing", "ingredients", "steps"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "role": { "type": "string", "enum": ["staple", "main", "side", "soup", "drink"] },
+        "minutes": { "type": "integer", "minimum": 1 },
+        "kcalPerServing": { "type": "integer", "minimum": 0, "description": "估算值，每人份" },
+        "summary": { "type": "string" },
+        "image": { "type": "string", "description": "相对路径，如 images/dish-001.webp；缺失时显示占位" },
+        "ingredients": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["item", "qty", "unit"],
+            "additionalProperties": false,
+            "properties": {
+              "item": { "type": "string" },
+              "qty": { "type": "number", "exclusiveMinimum": 0 },
+              "unit": { "type": "string", "description": "g / ml / 个 / 片 …" },
+              "shop": { "type": "boolean", "default": true, "description": "false = 常备调料，不进采购卡" }
+            }
+          }
+        },
+        "steps": { "type": "array", "minItems": 3, "items": { "type": "string" } },
+        "tip": { "type": "string" }
+      }
+    }
+  }
+}
