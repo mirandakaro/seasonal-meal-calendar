@@ -6,9 +6,9 @@
 
 一个开源 Agent Skill：告诉 AI「给家里做个三伏 40 天的食谱」，它会生成一份经过校验的菜单数据，再一键出一个手机上就能用的食谱网页。
 
-<img src="docs/preview.jpg" width="100%" alt="今日三餐 · 做法详情 · 采购卡">
+<img src="docs/preview.jpg" width="100%" alt="今日三餐 · 成品参考 · 四十日食历">
 
-<sub>截图来自仓库自带的虚构 3 天示例（立秋），未配成品图时显示内置的色块占位。</sub>
+<sub>作者给家里做的「三伏四十日食历」实拍截图，每道菜配了 AI 生成的成品图。</sub>
 
 </div>
 
@@ -24,6 +24,20 @@
 - **收藏、饮食记录、搜索**：吃完点一下自动记时间
 - **舒展字号**：一键放大，长辈看着不费劲
 - **离线单文件**：一个 `index.html`，不依赖服务器；收藏和记录只存在各自手机上
+
+## 📱 实际效果
+
+<table>
+<tr>
+<td align="center"><img src="docs/real-today.jpg" width="200"><br><sub>今日三餐</sub></td>
+<td align="center"><img src="docs/real-recipe.jpg" width="200"><br><sub>做法详情</sub></td>
+<td align="center"><img src="docs/real-photo.jpg" width="200"><br><sub>成品参考</sub></td>
+<td align="center"><img src="docs/real-40days.jpg" width="200"><br><sub>四十日食历</sub></td>
+<td align="center"><img src="docs/real-shop.jpg" width="200"><br><sub>采购与冰箱</sub></td>
+</tr>
+</table>
+
+<sub>说明：截图里的「家庭同步」和「冰箱库存」需要服务器，本 skill 生成的离线版不含这两项；成品图需要另配图像模型生成（可以配合 recipe-video-cards）。</sub>
 
 ## 🧠 AI 会怎么做
 
